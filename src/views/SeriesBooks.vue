@@ -1,6 +1,5 @@
 <template>
-    <h1 class="title">Series books</h1>
+  <h1 class="title">Series books</h1>
 </template>
 
-<script lang="ts">
-</script>
+<script lang="ts"></script>
