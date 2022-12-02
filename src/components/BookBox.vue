@@ -33,11 +33,12 @@
       </h2>
     </div>
     <div class="block" id="footer-block">
-      <button
+      <a
         class="button has-background-info has-text-light has-text-weight-bold"
+        :href="amazonUrl"
       >
         BUY
-      </button>
+    </a>
     </div>
   </div>
 </template>
@@ -51,13 +52,14 @@ export default {
     rank: Number,
     title: String,
     weeks: Number,
+    amazonUrl: String,
   },
   mounted() {
     // this.log();
   },
   methods: {
     log() {
-      console.log(this.weeks);
+      //console.log(this.weeks);
     },
   },
 };

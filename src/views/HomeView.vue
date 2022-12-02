@@ -34,6 +34,7 @@
               :image="book.book_image"
               :rank="book.rank"
               :weeks="book.weeks_on_list"
+              :amazonUrl="book.amazon_product_url"
             />
           </div>
         </div>
@@ -68,8 +69,8 @@ export default {
       await axios
         .get(axios.defaults.baseURL + "/lists/overview/.json?" + store.$nytKey)
         .then((response) => {
-          this.listsData = response.data.results;
-          console.log(this.listsData);
+          this.listsData = response.data.results;          
+          console.log(this.listsData)
           store.setIsLoading(false)
         })
         .catch((error) => {
@@ -82,7 +83,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .fa_custom {
   color: white;
 }
+
 </style>

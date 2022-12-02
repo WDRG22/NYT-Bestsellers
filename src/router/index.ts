@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import AdviceMiscVue from "@/views/AdviceMisc.vue";
 import ChildrensHardcoverVue from "@/views/ChildrensHardcover.vue";
-import combinedFictionVue from "@/views/combinedFiction.vue";
-import combinedNonfictionVue from "@/views/combinedNonfiction.vue";
-import hardcoverFictionVue from "@/views/hardcoverFiction.vue";
-import hardcoverNonfictionVue from "@/views/hardcoverNonfiction.vue";
+import combinedFictionVue from "@/views/CombinedFiction.vue";
+import combinedNonfictionVue from "@/views/CombinedNonfiction.vue";
+import hardcoverFictionVue from "@/views/HardcoverFiction.vue";
+import hardcoverNonfictionVue from "@/views/HardcoverNonfiction.vue";
 import HomeView from "../views/HomeView.vue";
 import PaperbackNonfictionVue from "@/views/PaperbackNonfiction.vue";
 import PictureBooksVue from "@/views/PictureBooks.vue";
