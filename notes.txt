@@ -1,0 +1,24 @@
+Vue 3 App
+    - Typescript
+    - Vue Router
+    - ESLint and Prettier
+    - Vuex for state management
+    - Use options api
+
+- Axios for http requests
+- Bulma for css templates
+- creativebulma/bulma-divider extension
+
+
+To Do:
+- Display list selections on homepage with preview on first 5 books from that list
+- Display books from particular list in order with book rank cover, title, author, description
+    - Eventually include Buy and favorite buttons
+- Get book cover images from Google Books api using isbn number
+- Implement client-side caching to prevent 429 Too Many Requests error
+- Implement date select feature for each book list
+- Implement search feature to search by book title and author
+- Implement feature to show loading wheel while fetching data
+- Create backend to allow user account creation and sign in 
+    - Create myaccount page
+    - Allow favoriting of Books
