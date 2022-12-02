@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import AdviceMiscVue from "@/views/AdviceMisc.vue";
-import ChildrensVue from "@/views/Childrens.vue";
+import ChildrensHardcoverVue from "@/views/ChildrensHardcover.vue";
 import combinedFictionVue from "@/views/combinedFiction.vue";
 import combinedNonfictionVue from "@/views/combinedNonfiction.vue";
 import hardcoverFictionVue from "@/views/hardcoverFiction.vue";
@@ -17,62 +17,50 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
       component: HomeView,
     },
     {
       path: "/advice-how-to-and-miscellaneous",
-      name: "adviceMisc",
       component: AdviceMiscVue,
     },
     {
       path: "/childrens-middle-grade-hardcover",
-      name: "Childrens",
-      component: ChildrensVue,
+      component: ChildrensHardcoverVue,
     },
     {
       path: "/combined-print-and-e-book-fiction",
-      name: "combinedFiction",
       component: combinedFictionVue,
     },
     {
       path: "/combined-print-and-e-book-nonfiction",
-      name: "combinedNonfiction",
       component: combinedNonfictionVue,
     },
     {
       path: "/hardcover-fiction",
-      name: "hardcoverFiction",
       component: hardcoverFictionVue,
     },
     {
       path: "/hardcover-nonfiction",
-      name: "hardcoverNoniction",
       component: hardcoverNonfictionVue,
     },
     {
       path: "/paperback-nonfiction",
-      name: "PaperBackNonfiction",
       component: PaperbackNonfictionVue,
     },
     {
       path: "/picture-books",
-      name: "PictureBooks",
       component: PictureBooksVue,
     },
     {
       path: "/series-books",
-      name: "SeriesBooks",
       component: SeriesBooksVue,
     },
     {
       path: "/trade-fiction-paperback",
-      name: "TradeFiction",
       component: TradeFictionVue,
     },
     {
       path: "/young-adult-hardcover",
-      name: "YoungAdult",
       component: YoungAdultVue,
     },
   ],

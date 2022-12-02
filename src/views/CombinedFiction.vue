@@ -1,5 +1,5 @@
 <template>
-  <h1 class="title">Combined fiction view</h1>
+  <h1 class="title has-text-light">Combined fiction view</h1>
 </template>
 
 <script lang="ts"></script>

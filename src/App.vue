@@ -27,19 +27,15 @@
     </div>
   </nav>
 
-  <body>
-    <div v-if="store.isLoading">
-      <div
-        class="is-loading-bar has-text-centered"
-        v-bind:class="{ 'is-loading': store.isLoading }"
-      >
-        <div class="lds-dual-ring"></div>
-      </div>
+  <section>
+    <div v-show="store.isLoading" class="fa_spinner_wrapper">
+      <font-awesome-icon icon="fa-solid fa-spinner fa-spin" class="fa-spin fa_custom fa-5x"></font-awesome-icon>
     </div>
-    <div v-else>
-      <RouterView />
+
+    <div>
+      <RouterView/>
     </div>
-  </body>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -51,4 +47,20 @@ const store = useUserStore();
 const showMobileMenu = ref(false);
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+@import "@/assets/styles.scss";
+
+section{
+  height: 100%;
+}
+.fa_spinner_wrapper {
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+</style>

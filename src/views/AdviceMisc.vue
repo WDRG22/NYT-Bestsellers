@@ -1,5 +1,5 @@
 <template>
-  <h1 class="title">Advice</h1>
+  <h1 class="title has-text-light">Advice</h1>
 </template>
 
 <script lang="ts"></script>

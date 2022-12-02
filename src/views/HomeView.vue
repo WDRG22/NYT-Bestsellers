@@ -1,18 +1,26 @@
 <template>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+  />
   <section class="section">
-    <h1 class="title has-text-centered">New York Times Bestseller Lists</h1>
+    <h1 class="title has-text-centered has-text-light">
+      New York Times Bestseller Lists
+    </h1>
     <div class="columns is-multiline mx-6">
       <div
         class="column is-12"
         v-for="list in listsData.lists"
         :key="list.list_name"
       >
-        <hr class="has-background-light" />
+        <hr class="has-background-grey-dark" />
         <router-link
-          class="title has-text-link"
+          class="title has-text-white"
           :to="'/' + list.list_name_encoded"
-          >{{ list.list_name }}</router-link
         >
+          {{ list.list_name }}
+          <font-awesome-icon icon="fa-solid fa-angle-right" class="fa_custom" />
+        </router-link>
         <div class="columns">
           <div
             class="column is-one-fifth has-text-centered p-1"
@@ -25,6 +33,7 @@
               :description="book.description"
               :image="book.book_image"
               :rank="book.rank"
+              :weeks="book.weeks_on_list"
             />
           </div>
         </div>
@@ -55,6 +64,7 @@ export default {
   methods: {
     async getListNames() {
       const store = useUserStore();
+      store.setIsLoading(true)
       await axios
         .get(axios.defaults.baseURL + "/lists/overview/.json?" + store.$nytKey)
         .then((response) => {
@@ -64,7 +74,14 @@ export default {
         .catch((error) => {
           console.log(error);
         });
+        store.setIsLoading(false)
     },
   },
 };
 </script>
+
+<style scoped lang="scss">
+.fa_custom {
+  color: white;
+}
+</style>
