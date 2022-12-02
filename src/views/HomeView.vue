@@ -4,7 +4,7 @@
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
   />
   <section class="section">
-    <h1 class="title has-text-centered has-text-light">
+    <h1 class="title has-text-centered has-text-light is-1">
       New York Times Bestseller Lists
     </h1>
     <div class="columns is-multiline mx-6">
@@ -21,7 +21,7 @@
           {{ list.list_name }}
           <font-awesome-icon icon="fa-solid fa-angle-right" class="fa_custom" />
         </router-link>
-        <div class="columns">
+        <div class="columns p-6 mx-6">
           <div
             class="column is-one-fifth has-text-centered p-1"
             v-for="book in list.books"
@@ -70,11 +70,12 @@ export default {
         .then((response) => {
           this.listsData = response.data.results;
           console.log(this.listsData);
+          store.setIsLoading(false)
         })
         .catch((error) => {
           console.log(error);
+          setTimeout(() => this.getListNames(), 6000)
         });
-        store.setIsLoading(false)
     },
   },
 };

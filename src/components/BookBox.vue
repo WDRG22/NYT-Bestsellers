@@ -20,7 +20,7 @@
         <p v-if="weeks == 1">New this week</p>
         <p v-else>{{ weeks }} weeks on list</p>
       </h2>
-      <h1 class="title has-text-left has-text-light has-text-weight-bold is-4">
+      <h1 class="title has-text-left has-text-white has-text-weight-bold is-4">
         {{ title }}
       </h1>
       <h2 class="subtitle has-text-left has-text-light is-italic is-6">
