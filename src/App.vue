@@ -1,11 +1,16 @@
 <template>
   <div v-show="store.isLoading" class="fa_spinner_wrapper">
-    <font-awesome-icon icon="fa-solid fa-circle-notch fa-spin" class="fa-spin fa-6x"></font-awesome-icon>
+    <font-awesome-icon
+      icon="fa-solid fa-circle-notch fa-spin"
+      class="fa-spin fa-6x"
+    ></font-awesome-icon>
   </div>
   <div v-show="!store.isLoading">
     <nav class="navbar has-background-black-ter p-1">
       <div class="navbar-brand">
-        <router-link to="/" class="navbar-item has-text-weight-bold has-text-white is-size-4"
+        <router-link
+          to="/"
+          class="navbar-item has-text-weight-bold has-text-white is-size-4"
           >New York Times</router-link
         >
         <a
@@ -30,22 +35,26 @@
         </div>
       </div>
     </nav>
-  
-    <section>              
-        <RouterView/>      
+
+    <section>
+      <RouterView />
     </section>
 
-    <footer class="footer has-background-black-bis has-text-centered has-text-grey">
+    <footer
+      class="footer has-background-black-bis has-text-centered has-text-grey"
+    >
       <div class="columns">
         <div class="column is-offset-4">
           <p>About</p>
           <p>Privacy</p>
-          <p>Terms</p>   
+          <p>Terms</p>
         </div>
         <div class="column">
           <p class="has-text-right">
-            Created with the use of 
-            <a href="https://developer.nytimes.com/docs/books-product/1/overview">
+            Created with the use of
+            <a
+              href="https://developer.nytimes.com/docs/books-product/1/overview"
+            >
               New York Times Books API
             </a>
           </p>
@@ -67,11 +76,11 @@ const showMobileMenu = ref(false);
 <style scoped lang="scss">
 @import "@/assets/styles.scss";
 
-nav{
+nav {
   border-bottom: 2px solid $white;
 }
 
-section{
+section {
   height: 100%;
 }
 
@@ -84,5 +93,4 @@ section{
   align-items: center;
   color: white;
 }
-
 </style>

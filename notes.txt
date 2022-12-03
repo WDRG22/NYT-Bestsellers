@@ -24,3 +24,4 @@ To Do:
     - Create myaccount page
     - Allow favoriting of Books
 - Make mobile friendly
+- Aggregate list views into single view to condense repeat code

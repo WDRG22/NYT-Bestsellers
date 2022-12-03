@@ -65,17 +65,17 @@ export default {
   methods: {
     async getListNames() {
       const store = useUserStore();
-      store.setIsLoading(true)
+      store.setIsLoading(true);
       await axios
         .get(axios.defaults.baseURL + "/lists/overview/.json?" + store.$nytKey)
         .then((response) => {
-          this.listsData = response.data.results;          
-          console.log(this.listsData)
-          store.setIsLoading(false)
+          this.listsData = response.data.results;
+          console.log(this.listsData);
+          store.setIsLoading(false);
         })
         .catch((error) => {
           console.log(error);
-          setTimeout(() => this.getListNames(), 6000)
+          setTimeout(() => this.getListNames(), 6000);
         });
     },
   },
@@ -83,9 +83,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 .fa_custom {
   color: white;
 }
-
 </style>

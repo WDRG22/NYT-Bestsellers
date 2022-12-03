@@ -38,7 +38,7 @@
         :href="amazonUrl"
       >
         BUY
-    </a>
+      </a>
     </div>
   </div>
 </template>
