@@ -52,7 +52,9 @@ export default {
       await axios
         .get(
           axios.defaults.baseURL +
-            "/lists.json?list=" + this.listName + "&" +
+            "/lists.json?list=" +
+            this.listName +
+            "&" +
             store.$nytKey
         )
         .then((response) => {
@@ -69,6 +71,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

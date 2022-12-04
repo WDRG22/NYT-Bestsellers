@@ -1,7 +1,5 @@
 <template>
-  <BookList
-    list-name="advice-how-to-and-miscellaneous"
-  />
+  <BookList list-name="advice-how-to-and-miscellaneous" />
 </template>
 
 <script lang="ts">
@@ -15,5 +13,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
