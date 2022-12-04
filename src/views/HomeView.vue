@@ -34,7 +34,7 @@
               :image="book.book_image"
               :rank="book.rank"
               :weeks="book.weeks_on_list"
-              :amazonUrl="book.amazon_product_url"
+              :amazon-url="book.amazon_product_url"
             />
           </div>
         </div>

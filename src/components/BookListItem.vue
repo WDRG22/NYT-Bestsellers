@@ -68,4 +68,8 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/styles.scss";
+
+template {
+  border-bottom: 2px solid $grey-dark;
+}
 </style>
